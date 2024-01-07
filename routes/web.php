@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\WorkoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index'])->name('index');
 Route::get('/show', [IndexController::class, 'show'])->name('index.show');
 Route::get('/create', [IndexController::class, 'create'])->name('index.create');
+
+Route::resource('/workouts', WorkoutController::class);

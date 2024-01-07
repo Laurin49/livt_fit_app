@@ -6,19 +6,29 @@
           <Link :href="route('index')">Home</Link>
         </div>
         <div class="text-xl font-bold text-center text-indigo-600 dark:text-indigo-300">
-          <Link :href="route('index.show')">Show</Link>
+          <Link :href="route('workouts.index')">Workouts</Link>
         </div>
         <div>
-          <Link :href="route('index.create')" class="btn-primary">+ Create</Link>
+          <Link :href="route('workouts.create')" class="btn-primary">+ Create</Link>
         </div>
       </nav>
     </div>
   </header>
   <main class="container p-4 mx-auto">
+    <div v-if="flashSuccess" class="p-2 mb-4 border border-green-200 rounded-md shadow-sm dark:border-green-800 bg-green-50 dark:bg-green-900">
+      {{ flashSuccess }}
+    </div>
     <slot>Default</slot>
   </main>
 </template>
 <script setup>
-import { Link } from '@inertiajs/inertia-vue3'
+import { computed } from 'vue'
+import { Link, usePage } from '@inertiajs/inertia-vue3'
+
+// page.props.value.flash.success
+const page = usePage()
+const flashSuccess = computed(
+  () => page.props.value.flash.success,
+)
 
 </script>
