@@ -71,6 +71,6 @@ const form = useForm({
   weight_max: props.workout.weight_max,
 })
 const update = () => form.put(
-  route('workouts.update', {workout: props.workout.id})
+  route('workouts.update', {workout: props.workout.id}),
 )
 </script>
