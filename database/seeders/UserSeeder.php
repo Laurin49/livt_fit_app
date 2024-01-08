@@ -16,14 +16,22 @@ class UserSeeder extends Seeder
     public function run()
     {
         \App\Models\User::create([
-            'name' => 'S.Schonlau',
-            'email' => 'schonlau@hsv.de',
-            'password' => Hash::make('hsv1887tv')
-        ]);
-        \App\Models\User::create([
             'name' => 'Admin',
             'email' => 'admin@hsv.de',
-            'password' => Hash::make('hsv1887tv')
+            'password' => Hash::make('hsv1887tv'),
+            'is_admin' => true
+        ]);
+        \App\Models\User::create([
+            'name' => 'S.Schonlau',
+            'email' => 'schonlau@hsv.de',
+            'password' => Hash::make('hsv1887tv'),
+            'is_admin' => false
+        ]);
+        \App\Models\User::create([
+            'name' => 'D.Welter',
+            'email' => 'welter@diwe-dev.de',
+            'password' => Hash::make('hsv1887tv'),
+            'is_admin' => false
         ]);
     }
 }

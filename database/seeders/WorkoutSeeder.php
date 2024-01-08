@@ -21,6 +21,7 @@ class WorkoutSeeder extends Seeder
 
         $this->training_first_week($datum);
         $this->training_second_week($datum);
+        $this->training_third_week($datum);
 
         // \App\Models\Workout::factory()->create([
         //     'exercise' => '',
@@ -40,7 +41,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 1),
             'set' => 4,
             'weight_min' => 20,
-            'weight_max' => 60
+            'weight_max' => 60,
+            'by_user_id' => 2
         ]);
         \App\Models\Workout::factory()->create([
             'exercise' => 'Beinstrecken',
@@ -48,7 +50,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 1),
             'set' => 3,
             'weight_min' => 10,
-            'weight_max' => 25
+            'weight_max' => 25,
+            'by_user_id' => 2
         ]);
         \App\Models\Workout::factory()->create([
             'exercise' => 'Beincurls',
@@ -56,7 +59,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 1),
             'set' => 3,
             'weight_min' => 5,
-            'weight_max' => 15
+            'weight_max' => 15,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -65,7 +69,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 1),
             'set' => 2,
             'weight_min' => 100,
-            'weight_max' => 120
+            'weight_max' => 120,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -74,7 +79,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 2),
             'set' => 4,
             'weight_min' => 10,
-            'weight_max' => 25
+            'weight_max' => 25,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -83,7 +89,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 2),
             'set' => 4,
             'weight_min' => 25,
-            'weight_max' => 35
+            'weight_max' => 35,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -92,7 +99,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 2),
             'set' => 2,
             'weight_min' => 7,
-            'weight_max' => 10
+            'weight_max' => 10,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -101,7 +109,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 3),
             'set' => 6,
             'weight_min' => 8,
-            'weight_max' => 12
+            'weight_max' => 12,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -110,7 +119,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 2),
             'set' => 3,
             'weight_min' => 10,
-            'weight_max' => 12
+            'weight_max' => 12,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -119,7 +129,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 2),
             'set' => 6,
             'weight_min' => 12,
-            'weight_max' => 26
+            'weight_max' => 26,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -128,7 +139,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 2),
             'set' => 2,
             'weight_min' => 9,
-            'weight_max' => 11
+            'weight_max' => 11,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -137,7 +149,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 3),
             'set' => 6,
             'weight_min' => 2,
-            'weight_max' => 4
+            'weight_max' => 4,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -146,7 +159,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 3),
             'set' => 4,
             'weight_min' => 25,
-            'weight_max' => 35
+            'weight_max' => 35,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -155,7 +169,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 4),
             'set' => 4,
             'weight_min' => 20,
-            'weight_max' => 30
+            'weight_max' => 30,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -164,7 +179,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 3),
             'set' => 4,
             'weight_min' => 20,
-            'weight_max' => 35
+            'weight_max' => 35,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -173,7 +189,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 3),
             'set' => 4,
             'weight_min' => 20,
-            'weight_max' => 30
+            'weight_max' => 30,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -182,7 +199,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 3),
             'set' => 4,
             'weight_min' => 1,
-            'weight_max' => 10
+            'weight_max' => 10,
+            'by_user_id' => 2
         ]);
 
     }
@@ -193,7 +211,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 8),
             'set' => 6,
             'weight_min' => 80,
-            'weight_max' => 120
+            'weight_max' => 120,
+            'by_user_id' => 2
         ]);
         \App\Models\Workout::factory()->create([
             'exercise' => 'Beinstrecken',
@@ -201,7 +220,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 8),
             'set' => 3,
             'weight_min' => 10,
-            'weight_max' => 25
+            'weight_max' => 25,
+            'by_user_id' => 2
         ]);
         \App\Models\Workout::factory()->create([
             'exercise' => 'Beincurls liegend',
@@ -209,7 +229,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 8),
             'set' => 4,
             'weight_min' => 10,
-            'weight_max' => 25
+            'weight_max' => 25,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -218,7 +239,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 8),
             'set' => 2,
             'weight_min' => 90,
-            'weight_max' => 110
+            'weight_max' => 110,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -227,7 +249,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 9),
             'set' => 5,
             'weight_min' => 15,
-            'weight_max' => 30
+            'weight_max' => 30,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -236,7 +259,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 9),
             'set' => 3,
             'weight_min' => 30,
-            'weight_max' => 35
+            'weight_max' => 35,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -245,7 +269,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 9),
             'set' => 2,
             'weight_min' => 2,
-            'weight_max' => 4
+            'weight_max' => 4,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -254,7 +279,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 9),
             'set' => 6,
             'weight_min' => 8,
-            'weight_max' => 14
+            'weight_max' => 14,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -263,7 +289,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 9),
             'set' => 3,
             'weight_min' => 6,
-            'weight_max' => 8
+            'weight_max' => 8,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -272,7 +299,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 9),
             'set' => 6,
             'weight_min' => 7,
-            'weight_max' => 11
+            'weight_max' => 11,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -281,7 +309,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 9),
             'set' => 2,
             'weight_min' => 73,
-            'weight_max' => 73
+            'weight_max' => 73,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -290,7 +319,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 10),
             'set' => 7,
             'weight_min' => 2,
-            'weight_max' => 5
+            'weight_max' => 5,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -299,7 +329,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 10),
             'set' => 3,
             'weight_min' => 30,
-            'weight_max' => 35
+            'weight_max' => 35,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -308,7 +339,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 11),
             'set' => 5,
             'weight_min' => 20,
-            'weight_max' => 30
+            'weight_max' => 30,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -317,7 +349,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 11),
             'set' => 4,
             'weight_min' => 20,
-            'weight_max' => 35
+            'weight_max' => 35,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -326,7 +359,8 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 11),
             'set' => 4,
             'weight_min' => 20,
-            'weight_max' => 30
+            'weight_max' => 30,
+            'by_user_id' => 2
         ]);
 
         \App\Models\Workout::factory()->create([
@@ -335,7 +369,79 @@ class WorkoutSeeder extends Seeder
             'datum' => $this->addDays($datum, 11),
             'set' => 4,
             'weight_min' => 1,
-            'weight_max' => 10
+            'weight_max' => 10,
+            'by_user_id' => 2
+        ]);
+
+
+    }
+    private function training_third_week($datum) {
+        \App\Models\Workout::factory()->create([
+            'exercise' => 'Beinpresse',
+            'muscle' => 'Beine',
+            'datum' => $this->addDays($datum, 24),
+            'set' => 6,
+            'weight_min' => 80,
+            'weight_max' => 120,
+            'by_user_id' => 3
+        ]);
+        \App\Models\Workout::factory()->create([
+            'exercise' => 'Beinstrecken',
+            'muscle' => 'Beine',
+            'datum' => $this->addDays($datum, 24),
+            'set' => 3,
+            'weight_min' => 10,
+            'weight_max' => 25,
+            'by_user_id' => 3
+        ]);
+        \App\Models\Workout::factory()->create([
+            'exercise' => 'Beincurls liegend',
+            'muscle' => 'Beine',
+            'datum' => $this->addDays($datum, 24),
+            'set' => 4,
+            'weight_min' => 10,
+            'weight_max' => 25,
+            'by_user_id' => 3
+        ]);
+
+        \App\Models\Workout::factory()->create([
+            'exercise' => 'Wadenheben - Beinpresse',
+            'muscle' => 'Beine',
+            'datum' => $this->addDays($datum, 24),
+            'set' => 2,
+            'weight_min' => 90,
+            'weight_max' => 110,
+            'by_user_id' => 3
+        ]);
+
+        \App\Models\Workout::factory()->create([
+            'exercise' => 'Bankdrücken L.H.',
+            'muscle' => 'Brust',
+            'datum' => $this->addDays($datum, 25),
+            'set' => 5,
+            'weight_min' => 15,
+            'weight_max' => 30,
+            'by_user_id' => 3
+        ]);
+
+        \App\Models\Workout::factory()->create([
+            'exercise' => 'Schrägbankdrücken L.H.',
+            'muscle' => 'Brust',
+            'datum' => $this->addDays($datum, 25),
+            'set' => 3,
+            'weight_min' => 30,
+            'weight_max' => 35,
+            'by_user_id' => 3
+        ]);
+
+        \App\Models\Workout::factory()->create([
+            'exercise' => 'Butterfly K.H.',
+            'muscle' => 'Brust',
+            'datum' => $this->addDays($datum, 25),
+            'set' => 2,
+            'weight_min' => 2,
+            'weight_max' => 4,
+            'by_user_id' => 3
         ]);
 
     }

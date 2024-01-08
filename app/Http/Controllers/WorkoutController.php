@@ -7,11 +7,11 @@ use Illuminate\Http\Request;
 
 class WorkoutController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {
+        $this->authorizeResource(Workout::class, 'workout');
+    }
+
     public function index()
     {
         $workouts = Workout::all();
@@ -45,7 +45,7 @@ class WorkoutController extends Controller
     public function store(Request $request)
     {
         // dd($request);
-        Workout::create(
+        $request->user()->listings()->create(
             $request->validate([
                 'exercise' => 'required',
                 'muscle' => 'required',
@@ -69,6 +69,7 @@ class WorkoutController extends Controller
      */
     public function show(Workout $workout)
     {
+        $this->authorize('view', $workout);
         return inertia(
             'Workout/Show',
             [
