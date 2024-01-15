@@ -12,14 +12,20 @@ class WorkoutController extends Controller
         $this->authorizeResource(Workout::class, 'workout');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $workouts = Workout::all();
+        $filters = $request->only([
+            'muscle', 'datum_von', 'datum_bis'
+        ]);
 
         return inertia(
             'Workout/Index',
             [
-                'workouts' => $workouts
+                'filters' => $filters,
+                'workouts' => Workout::mostRecent()
+                    ->filter($filters)
+                    ->paginate(15)
+                    ->withQueryString()
             ]
         );
     }
