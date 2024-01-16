@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\PracticeWorkoutController;
 use App\Http\Controllers\UserAccountController;
 use App\Http\Controllers\WorkoutController;
 use Illuminate\Support\Facades\Route;
@@ -31,3 +32,10 @@ Route::post('login', [AuthController::class, 'store'])->name('login.store');
 Route::delete('logout', [AuthController::class, 'destroy'])->name('logout');
 
 Route::resource('user-account', UserAccountController::class)->only(['create', 'store']);
+
+Route::prefix('practice')
+  ->name('practice.')
+  ->middleware('auth')
+  ->group(function() {
+    Route::resource('workout', PracticeWorkoutController::class);
+  });

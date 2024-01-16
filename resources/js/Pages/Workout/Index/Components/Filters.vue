@@ -1,6 +1,6 @@
 <template>
   <form @submit.prevent="filter">
-    <div class="flex flex-wrap justify-between gap-2 mt-2 mb-4">
+    <div class="flex flex-wrap justify-between gap-2 p-2 mt-2 mb-4 border border-solid">
       <div class="flex items-end">
         <select v-model="filterForm.muscle" class="w-30 input-filter-l">
           <option :value="null">Muscle</option>
