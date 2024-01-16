@@ -9,7 +9,7 @@
           <Link :href="route('workouts.index')">Workouts</Link>
         </div>
         <div v-if="user" class="flex items-center gap-4">
-          <div class="text-sm text-gray-500">{{ user.name }}</div>
+          <Link class="text-sm text-gray-500" :href="route('practice.workout.index')">{{ user.name }}</Link>
           <Link :href="route('logout')" method="delete" as="button">Logout</Link>
           <Link :href="route('workouts.create')" class="btn-primary">+ New Workout</Link>
         </div>
